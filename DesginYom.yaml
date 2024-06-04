@@ -5,7 +5,7 @@ steps:
   - functions
   - deploy
   - downloadBase
-  - --region=FUNCTION_REGION
-  - --source=.
+  - --region="us-east4"
+  - --source="https://us-central1-abraham-project.cloudfunctions.net/downloadBase"
   - --trigger-http
   - --runtime=RUNTIME
