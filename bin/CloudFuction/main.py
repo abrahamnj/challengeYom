@@ -2,6 +2,7 @@ import pandas as pd
 import requests
 from google.cloud import storage
 
+
 def download_csv_from_url(url):
     response = requests.get(url)
     df = pd.read_csv(io.StringIO(response.text))
