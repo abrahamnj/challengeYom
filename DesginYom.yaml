@@ -1,11 +1,11 @@
 steps:
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+- name: "python:3.8-slim"
+  id: Tests
+  entrypoint: /bin/sh
   args:
-  - gcloud
-  - functions
-  - deploy
-  - downloadBase
-  - --region="us-east4"
-  - --source="https://us-central1-abraham-project.cloudfunctions.net/downloadBase"
-  - --trigger-http
-  - --runtime=python
+    - -c
+    - "pip install -r requirements.txt && pip install pytest && pytest test/bp_tests/"
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions', 'deploy', 'downloadBase', '--trigger-http', '--runtime', 'python38', '--memory', '2GB', '--timeout', '540s', '--allow-unauthentucated']
+  dir: 'src'
