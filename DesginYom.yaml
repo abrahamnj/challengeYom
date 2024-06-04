@@ -8,4 +8,4 @@ steps:
   - --region="us-east4"
   - --source="https://us-central1-abraham-project.cloudfunctions.net/downloadBase"
   - --trigger-http
-  - --runtime=RUNTIME
+  - --runtime=python
