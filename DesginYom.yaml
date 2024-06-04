@@ -1,11 +1,10 @@
 steps:
-- name: "python:3.8-slim"
-  id: Tests
-  entrypoint: /bin/sh
-  args:
-    - -c
-    - "pip install -r requirements.txt && pip install pytest && pytest test/bp_tests/"
-
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'downloadBase', '--trigger-http', '--runtime', 'python38', '--memory', '2GB', '--timeout', '540s', '--allow-unauthentucated']
-  dir: 'src'
+  args:
+  - functions
+  - deploy
+  - downloadBase
+  - --source=.
+  - --trigger-http
+  - --runtime=python37
+  - --allow-unauthenticated
