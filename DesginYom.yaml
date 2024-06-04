@@ -4,7 +4,7 @@ steps:
   - functions
   - deploy
   - downloadBase
-  - --source=.
+  - --source= "https://us-central1-abraham-project.cloudfunctions.net/downloadBase"
   - --trigger-http
   - --runtime=python37
   - --allow-unauthenticated
