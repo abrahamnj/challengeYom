@@ -4,7 +4,7 @@ steps:
   - functions
   - deploy
   - downloadBase
-  - --source= gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip
+  - --source= 'gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip'
   - --trigger-http
-  - --runtime=python37
+  - --runtime=python39
   - --allow-unauthenticated
