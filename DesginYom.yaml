@@ -1,10 +1,18 @@
 steps:
+- name: 'gcr.io/cloud-builders/git'
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - |
+      git config --global init.defaultBranch master
+      git init
+
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
-  - functions
-  - deploy
-  - downloadBase
-  - --source= 'gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip'
-  - --trigger-http
-  - --runtime=python39
-  - --allow-unauthenticated
+    - functions
+    - deploy
+    - downloadBase
+    - --source=gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip
+    - --trigger-http
+    - --runtime=python38
+    - --allow-unauthenticated
