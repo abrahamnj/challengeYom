@@ -15,11 +15,11 @@ steps:
     - --source=gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip
     - --trigger-http
     - --entry-point=main
-    - --update-source: true
     - --runtime=python38
     - --allow-unauthenticated
     
 artifacts:
   objects:
     location: 'gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip'
+    update-source: true
     paths: ['function-source.zip']
