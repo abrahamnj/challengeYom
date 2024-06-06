@@ -6,7 +6,17 @@ steps:
     - |
       git config --global init.defaultBranch main
       git init
- 
+
+ sh "cd bin/CloudFuction && zip -r descargando_base_web.zip *"
+ sh "gsutil cp bin/CloudFuction/function-source.zip gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip"
+ sh """
+						echo "N" | gcloud functions deploy function-source --memory 2Gi --runtime python38 \
+						--source gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip \
+						--trigger-bucket "gcf-v2-sources-41404494176-us-central1" \
+                        --service-account "service-41404494176@gcf-admin-robot.iam.gserviceaccount.com" \
+						--timeout 540s \
+						--region "us-central1" --entry-point ingesta_data_entry \
+					"""
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
     - functions
