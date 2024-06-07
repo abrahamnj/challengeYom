@@ -12,10 +12,10 @@ steps:
     - functions
     - deploy
     - obtener_base_web
-    - --source= gs://gitcloudfuction/function-proyect.zip
+    - --source=. #gs://gitcloudfuction/function-proyect.zip
     - --trigger-http
     # - --entry-point=main
-    - --runtime=python38
+    - --runtime=python37
     - --allow-unauthenticated
 
 # - name: 'gcr.io/cloud-builders/gcloud'
