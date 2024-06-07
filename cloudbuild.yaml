@@ -18,11 +18,11 @@ steps:
     - --runtime=python38
     - --allow-unauthenticated
 
-- name: 'gcr.io/cloud-builders/gcloud'
-  args:
-    - functions
-    - call
-    - downloadBase
+# - name: 'gcr.io/cloud-builders/gcloud'
+#   args:
+#     - functions
+#     - call
+#     - downloadBase
 
 
     
