@@ -12,7 +12,7 @@ steps:
     - functions
     - deploy
     - downloadBase
-    - --source= 'abraham-project/github_abrahamnj_challengeyom/'
+    - --source= 'gs://abraham-project/github_abrahamnj_challengeyom/'
     - --trigger-http
     - --entry-point=main
     - --runtime=python38
