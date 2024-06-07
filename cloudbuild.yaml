@@ -21,14 +21,11 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
     - run
-    - curl
-    - '-X'
-    - POST
-    - '-H'
-    - 'Content-type: application/json'
-    - '--data'
-    - '{"text":"Esto es una prueba!"}'
-    - https://us-central1-abraham-project.cloudfunctions.net/downloadBase
+    - services
+    - call
+    - GET
+    - downloadBase
+
 
     
 # artifacts:
