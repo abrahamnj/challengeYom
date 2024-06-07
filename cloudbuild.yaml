@@ -7,20 +7,6 @@ steps:
       git config --global init.defaultBranch main
       git init
 
-service: mi-servicio
-provider:
-  name: google
-  runtime: python38
-  project: mi-proyecto
-  region: us-central1
-
-functions:
-  mi-funcion:
-    handler: main.main
-    source: https://github.com/usuario/mi-repositorio.git
-    events:
-      - http: path
-
 # - name: 'gcr.io/cloud-builders/gcloud'
 #   args:
 #     - functions
