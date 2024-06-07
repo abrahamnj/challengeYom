@@ -22,7 +22,8 @@ steps:
   args:
     - run
     - services
-    - call
+    - gcloud functions
+    - gcloud run
     - GET
     - downloadBase
 
