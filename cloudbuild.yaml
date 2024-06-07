@@ -21,5 +21,4 @@ steps:
 artifacts:
   objects:
     location: 'gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip'
-    update-source: true
     paths: ['function-source.zip']
