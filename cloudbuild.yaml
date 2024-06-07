@@ -17,11 +17,15 @@ steps:
     - --entry-point=main
     - --runtime=python38
     - --allow-unauthenticated
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
     - functions
     - call
     - CloudFuctionDownloadBaseWEB
 
 
+    
 # artifacts:
 #   objects:
 #     location: 'gs://gcf-v2-sources-41404494176-us-central1/downloadBase/'
