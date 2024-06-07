@@ -12,7 +12,7 @@ steps:
     - functions
     - deploy
     - downloadBase
-    - --source= https://github.com/abrahamnj/challengeYom.git
+    - --source= 'abraham-project/github_abrahamnj_challengeyom/'
     - --trigger-http
     - --entry-point=main
     - --runtime=python38
@@ -20,5 +20,6 @@ steps:
     
 artifacts:
   objects:
-    location: 'gs://gcf-v2-sources-41404494176-us-central1/downloadBase/'
+    location: 'gcf-v2-sources-41404494176-us-central1/downloadBase/'
     paths: ['*.zip']
+	
