@@ -1,7 +1,7 @@
 from google.cloud import storage
 import requests
 
-def main(request):
+def obtener_base_web(request):
     url = 'https://www.datos.gov.co/resource/avtd-u64r.csv'
     response = requests.get(url)
 
@@ -13,6 +13,3 @@ def main(request):
     blob = bucket.blob(blob_name)
     blob.upload_from_string(response.content.decode("utf-8"))
     return f"Archivo {blob_name} subido exitosamente al bucket {bucket_name}"
-    
-if __name__ == '__main__':
-    main()
