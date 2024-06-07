@@ -11,10 +11,10 @@ steps:
   args:
     - functions
     - deploy
-    - downloadBase
-    - --source=gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip
+    - DesdeGit
+    - --source=gs://downloadBase/function-source.zip
     - --trigger-http
-    - --entry-point=downloadBase
+    - --entry-point=main
     - --runtime=python38
     - --allow-unauthenticated
 
@@ -22,7 +22,7 @@ steps:
   args:
     - functions
     - call
-    - downloadBase
+    - DesdeGit
 
 
     
