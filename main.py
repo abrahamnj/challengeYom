@@ -1,6 +1,7 @@
 from google.cloud import storage
 import requests
 
+
 def gatillador(request):
     """
     Esta función descarga un archivo CSV desde una URL y lo sube a un bucket de Google Cloud Storage.
