@@ -1,11 +1,11 @@
 steps:
-- name: 'gcr.io/cloud-builders/git'
-  entrypoint: 'bash'
-  args:
-    - '-c'
-    - |
-      git config --global init.defaultBranch main
-      git init
+# - name: 'gcr.io/cloud-builders/git'
+#   entrypoint: 'bash'
+#   args:
+#     - '-c'
+#     - |
+#       git config --global init.defaultBranch main
+#       git init
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
