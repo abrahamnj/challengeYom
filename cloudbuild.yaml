@@ -11,10 +11,10 @@ steps:
   args:
     - functions
     - deploy
-    - descarga
+    - gatillador
     - --source=. #gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip
     - --trigger-http
-    - --entry-point=main
+    # - --entry-point=main
     - --runtime=python38
     - --allow-unauthenticated
     
