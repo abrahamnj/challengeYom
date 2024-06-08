@@ -14,5 +14,4 @@ def obtener_base_web(request):
     blob.upload_from_string(response.content.decode("utf-8"))
     return f"Archivo {blob_name} subido exitosamente al bucket {bucket_name}"
 
-
 #################################################
