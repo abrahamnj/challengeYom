@@ -1,8 +1,0 @@
-google-cloud-storage==2.4.0
-google-cloud-bigquery==3.2.0
-pandas==1.4.3
-fsspec==2022.5.0
-gcsfs==2022.5.0
-requests-google==0.0.7
-requests-auth==6.0.0
-google-auth==2.10.0
