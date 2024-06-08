@@ -1,18 +1,18 @@
-steps:
-- name: 'gcr.io/cloud-builders/git'
-  entrypoint: 'bash'
-  args:
-    - '-c'
-    - |
-      git config --global init.defaultBranch main
-      git init
+# steps:
+# - name: 'gcr.io/cloud-builders/git'
+#   entrypoint: 'bash'
+#   args:
+#     - '-c'
+#     - |
+#       git config --global init.defaultBranch main
+#       git init
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
     - functions
     - deploy
     - main
-    - --source=gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip
+    - --source=. #gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip
     - --trigger-http
     - --entry-point=main
     - --runtime=python38
