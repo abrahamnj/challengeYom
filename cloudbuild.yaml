@@ -4,14 +4,14 @@ steps:
   args:
     - '-c'
     - |
-      git config --global init.defaultBranch master
+      git config --global init.defaultBranch main
       git init
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
     - functions
     - deploy
-    - main
+    - descarga
     - --source=. #gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip
     - --trigger-http
     - --entry-point=main
