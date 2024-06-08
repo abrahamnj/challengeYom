@@ -15,7 +15,7 @@ steps:
     - --source=gs://gcf-v2-sources-41404494176-us-central1/downloadBase/function-source.zip
     - --trigger-http
     # - --entry-point=main
-    - --runtime=python37
+    - --runtime=python38
     - --allow-unauthenticated
 
 # - name: 'gcr.io/cloud-builders/gcloud'
